@@ -180,10 +180,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     consumerir.msm8952
 
+<<<<<<< HEAD
+=======
+
+# BSOD Killer
+>>>>>>> 6b78787... kenzo: Import OSS camera hal from caf
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml
 
+<<<<<<< HEAD
 # IRQ
+=======
+# Camera
+PRODUCT_PACKAGES += \
+    camera.msm8952 \
+    libqomx_core \
+    libmm-qcamera
+
+
+# Input
+>>>>>>> 6b78787... kenzo: Import OSS camera hal from caf
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
     $(LOCAL_PATH)/configs/msm_irqbalance_little_big.conf:system/vendor/etc/msm_irqbalance_little_big.conf
