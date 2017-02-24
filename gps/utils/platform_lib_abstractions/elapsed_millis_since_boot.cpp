@@ -44,3 +44,13 @@ int64_t elapsedMillisSinceBoot()
     int64_t t_us = systemTime(0);
     return (int64_t) t_us / 1000LL;
 }
+
+void vote_ondemand_io_busy_off();
+void unvote_ondemand_io_busy_off();
+void vote_ondemand_sdf_low();
+void unvote_ondemand_sdf_low();
+void perform_hint_action(int hint_id, int resource_values[],
+    int num_resources);
+void undo_hint_action(int hint_id);
+int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[]);
+void release_request(int lock_handle);
