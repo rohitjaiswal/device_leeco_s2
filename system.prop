@@ -48,8 +48,18 @@ persist.radio.jbims=0
 # Property to enable PLI for VT call video quality
 #persist.radio.RATE_ADAPT_ENABLE=1
 
+
 # Property to disable IMS_DEBUG log
 #persist.ims.disableDebugLogs=1
+
+persist.radio.start_ota_daemon=1 
+persist.radio.sw_mbn_update=0
+persist.radio.hw_mbn_update=0
+
+# Telephony
+#turn on CdmaLTEPhone always
+telephony.lteOnCdmaDevice=1
+
 
 # NITZ
 persist.rild.nitz_plmn="" \
