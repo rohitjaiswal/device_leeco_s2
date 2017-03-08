@@ -23,14 +23,6 @@
          is the percentage of camera preview height/width to scale to. -->
     <integer name="panorama_frame_size_reduction">100</integer>
 
-    <!-- Opens back camera using openLegacy() -->
-    <bool name="back_camera_open_legacy">false</bool>
-
-    <!-- Opens front camera using openLegacy() -->
-    <bool name="front_camera_open_legacy">false</bool>
-
-    <!-- Enable support for camera api v2 -->
-    <bool name="support_camera_api_v2">true</bool>
 
     <!-- Force use a specific preview-size
          Example: 1920x1080 -->
