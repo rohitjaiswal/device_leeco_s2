@@ -13,18 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+<<<<<<< HEAD
 #define LOG_TAG "ConsumerIrHal"
 
 #include <errno.h>
 #include <malloc.h>
 #include <string.h>
 #include <cutils/log.h>
+=======
+#define LOG_TAG "ConsumerIrLirc"
+
+#include <errno.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <string.h>
+#include <stdlib.h>
+#include <linux/lirc.h>
+#include <cutils/log.h>
+#include <cutils/properties.h>
+>>>>>>> d833635... Move to oss consumerir hal
 #include <hardware/hardware.h>
 #include <hardware/consumerir.h>
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
 
 static const consumerir_freq_range_t consumerir_freqs[] = {
+<<<<<<< HEAD
     {.min = 30000, .max = 30000},
     {.min = 33000, .max = 33000},
     {.min = 36000, .max = 36000},
@@ -33,11 +47,30 @@ static const consumerir_freq_range_t consumerir_freqs[] = {
     {.min = 56000, .max = 56000},
 };
 
+=======
+    {.min = 30000, .max = 60000},
+};
+
+static int open_lircdev(void)
+{
+    char value[PROPERTY_VALUE_MAX] = {'\0'};
+    property_get("ro.lirc.dev", value, "/dev/lirc0");
+    int fd = open(value, O_RDWR);
+    if (fd < 0) {
+        ALOGE("failed to open %s error %d", value, fd);
+        return fd;
+    }
+
+    return fd;
+}
+
+>>>>>>> d833635... Move to oss consumerir hal
 static int consumerir_transmit(struct consumerir_device *dev __unused,
    int carrier_freq, const int pattern[], int pattern_len)
 {
     int total_time = 0;
     long i;
+<<<<<<< HEAD
 
     for (i = 0; i < pattern_len; i++)
         total_time += pattern[i];
@@ -47,6 +80,50 @@ static int consumerir_transmit(struct consumerir_device *dev __unused,
     usleep(total_time);
 
     return 0;
+=======
+    int fd;
+    int rc;
+    char value[PROPERTY_VALUE_MAX] = {'\0'};
+    int duty_cycle;
+
+    fd = open_lircdev();
+    if (fd < 0) {
+        return fd;
+    }
+
+    rc = ioctl(fd, LIRC_SET_SEND_CARRIER, &carrier_freq);
+    if (rc < 0) {
+        ALOGE("failed to set carrier %d error %d", carrier_freq, rc);
+        goto out_close;
+    }
+
+    property_get("ro.lirc.duty_cycle", value, "33");
+    duty_cycle = atoi(value);
+    rc = ioctl(fd, LIRC_SET_SEND_DUTY_CYCLE, &duty_cycle);
+    if (rc < 0) {
+        ALOGE("failed to set duty cycle %d error %d", duty_cycle, rc);
+        goto out_close;
+    }
+
+    if (pattern_len&1) {
+        rc = write(fd, pattern, sizeof(*pattern)*pattern_len);
+    }
+    else {
+        rc = write(fd, pattern, sizeof(*pattern)*(pattern_len-1));
+        usleep(pattern[pattern_len-1]);
+    }
+    if (rc < 0) {
+        ALOGE("failed to write pattern %d error %d", pattern_len, rc);
+        goto out_close;
+    }
+
+    rc = 0;
+
+out_close:
+    close(fd);
+
+    return rc;
+>>>>>>> d833635... Move to oss consumerir hal
 }
 
 static int consumerir_get_num_carrier_freqs(struct consumerir_device *dev __unused)
@@ -84,6 +161,15 @@ static int consumerir_open(const hw_module_t* module, const char* name,
         return -EINVAL;
     }
 
+<<<<<<< HEAD
+=======
+    int lircfd = open_lircdev();
+    if (lircfd < 0) {
+        return lircfd;
+    }
+    close(lircfd);
+
+>>>>>>> d833635... Move to oss consumerir hal
     consumerir_device_t *dev = malloc(sizeof(consumerir_device_t));
     memset(dev, 0, sizeof(consumerir_device_t));
 
@@ -110,8 +196,13 @@ consumerir_module_t HAL_MODULE_INFO_SYM = {
         .module_api_version = CONSUMERIR_MODULE_API_VERSION_1_0,
         .hal_api_version    = HARDWARE_HAL_API_VERSION,
         .id                 = CONSUMERIR_HARDWARE_MODULE_ID,
+<<<<<<< HEAD
         .name               = "Demo IR HAL",
         .author             = "The Android Open Source Project",
+=======
+        .name               = "LIRC IR HAL",
+        .author             = "Xiaomi Corporation",
+>>>>>>> d833635... Move to oss consumerir hal
         .methods            = &consumerir_module_methods,
     },
 };
