@@ -28,7 +28,7 @@
 #include <malloc.h>
 #include <string.h>
 #include <stdlib.h>
-#include <linux/lirc.h>
+#include <media/lirc.h>
 #include <cutils/log.h>
 #include <cutils/properties.h>
 >>>>>>> d833635... Move to oss consumerir hal
