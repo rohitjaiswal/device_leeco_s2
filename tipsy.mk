@@ -1,11 +1,11 @@
 # Inherit device configuration
 $(call inherit-product, device/leeco/s2/full_s2.mk)
 
-# Inherit some common Validus stuff.
-$(call inherit-product, vendor/validus/config/common.mk)
+# Inherit some common TIPSY stuff.
+$(call inherit-product, vendor/tipsy/config/common.mk)
 
 # Inherit telephony stuff
-$(call inherit-product, vendor/validus/config/common_full_phone.mk)
+$(call inherit-product, vendor/tipsy/config/common_full_phone.mk)
 
 # Validus Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -19,7 +19,7 @@ TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := s2
-PRODUCT_NAME := validus_s2
+PRODUCT_NAME := tipsy_s2
 PRODUCT_BRAND := LeEco
 PRODUCT_MANUFACTURER := LeMobile
 
