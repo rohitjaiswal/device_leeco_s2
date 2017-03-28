@@ -1,11 +1,11 @@
 # Inherit device configuration
 $(call inherit-product, device/leeco/s2/full_s2.mk)
 
-# Inherit some common DU stuff.
-$(call inherit-product, vendor/du/config/common.mk)
+# Inherit some common Tesla stuff.
+$(call inherit-product, vendor/tesla/config/common.mk)
 
 # Inherit telephony stuff
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+$(call inherit-product, vendor/tesla/config/common_full_phone.mk)
 
 # Validus Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -15,11 +15,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
--include vendor/du/config/bootanimation.mk
+-include vendor/tesla/config/bootanimation.mk
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := s2
-PRODUCT_NAME := du_s2
+PRODUCT_NAME := tesla_s2
 PRODUCT_BRAND := LeEco
 PRODUCT_MANUFACTURER := LeMobile
 
