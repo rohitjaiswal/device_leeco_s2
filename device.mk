@@ -170,11 +170,6 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    fingerprint.msm8952 \
-    fingerprintd
-
 # IR
 PRODUCT_PACKAGES += \
     consumerir.msm8952
