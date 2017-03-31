@@ -281,7 +281,7 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     thermanager
-
+	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermanager.xml:system/etc/thermanager.xml
 
@@ -309,7 +309,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd \
-	fingerprint.kenzo
+    fingerprint.msm8952
 
 PRODUCT_PACKAGES += \
     WCNSS_wlan_dictionary.dat
