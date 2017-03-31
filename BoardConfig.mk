@@ -29,6 +29,12 @@ TARGET_TS_MAKEUP := true
 TARGET_BOARD_PLATFORM := msm8952
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno510
 
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := kenzo
+TARGET_NO_BOOTLOADER := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -125,7 +131,6 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # This is needed for us as it disables tcache, which is breaking camera.
 MALLOC_SVELTE := true
-BOARD_GLOBAL_CFLAGS += -DDECAY_TIME_DEFAULT=0
 
 # Charger
 WITH_CM_CHARGER := true
