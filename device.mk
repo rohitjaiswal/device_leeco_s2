@@ -142,6 +142,9 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    camera.msm8952 \
+    libqomx_core \
+    libmm-qcamera \
     Snap
 
 # Charger
