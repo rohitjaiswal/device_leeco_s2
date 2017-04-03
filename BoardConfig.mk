@@ -44,7 +44,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := MSM8952
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -59,6 +59,8 @@ TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_SOURCE := kernel/leeco/msm8976
 TARGET_KERNEL_CONFIG := lineage_s2_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 BOARD_DTBTOOL_ARGS := -2
 
@@ -161,7 +163,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Media
 TARGET_HAVE_SIGNED_VENUS_FW := true
-TARGET_USES_MEDIA_EXTENSIONS := true
+#TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true

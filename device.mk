@@ -142,8 +142,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
-    camera.msm8952
+    Snap
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -273,6 +272,7 @@ PRODUCT_COPY_FILES += \
 # Stlport
 PRODUCT_PACKAGES += \
     libstlport
+
 
 # Wifi
 PRODUCT_PACKAGES += \
