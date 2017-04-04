@@ -5,7 +5,7 @@
     "branch": "cm-14.1"
   },
   {
-    "repository": "hemantbeast/android_kernel_leeco_msm8976",
+    "repository": "LineageOS/android_kernel_leeco_msm8976",
     "target_path": "kernel/leeco/msm8976",
     "branch": "cm-14.1"
   },
