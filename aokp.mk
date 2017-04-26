@@ -2,12 +2,12 @@
 $(call inherit-product, device/leeco/s2/full_s2.mk)
 
 # Inherit some common AOKP stuff.
-$(call inherit-product, vendor/hexagon/configs/common.mk)
+$(call inherit-product, vendor/aokp/configs/common.mk)
 
 # Inherit telephony stuff
-$(call inherit-product, vendor/hexagon/configs/telephony.mk)
+$(call inherit-product, vendor/aokp/configs/telephony.mk)
 
-# Hexagon Device Maintainers
+# AOKP Device Maintainers
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DEVICE_MAINTAINERS="Rohit Jaiswal (rohitjaiswal)"
 
@@ -15,11 +15,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
--include vendor/hexagon/configs/bootanimation.mk
+-include vendor/aokp/configs/bootanimation.mk
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := s2
-PRODUCT_NAME := hexagon_s2
+PRODUCT_NAME := aokp_s2
 PRODUCT_BRAND := LeEco
 PRODUCT_MANUFACTURER := LeMobile
 

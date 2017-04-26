@@ -1,4 +1,5 @@
 Copyright 2016 - The CyanogenMod Project
+Copyright 2017 - The Lineage Project
 
 Device configuration for Letv LeEco Le 2 (International).
 =======================================================
