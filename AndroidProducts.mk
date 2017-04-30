@@ -1,3 +1,3 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_s2.mk
+    $(LOCAL_DIR)/aosip_s2.mk
 
