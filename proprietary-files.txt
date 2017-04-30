@@ -29,7 +29,6 @@ lib/hw/sensors.msm8952.so
 lib/hw/gps.default.so
 -lib/libloc_api_v02.so
 lib/libarcsoft_night_shot.so
-lib/libmm-qcamera.so
 lib/libarcimgutils.so
 lib/libamipengine.so
 lib/libarcsoft_beautyshot.so
@@ -919,3 +918,5 @@ bin/cnd
 bin/xtwifi-client
 bin/garden_app
 bin/yep_qmi_server
+-vendor/lib/libts_detected_face_hal.so
+-vendor/lib/libts_face_beautify_hal.so
