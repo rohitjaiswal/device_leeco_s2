@@ -193,11 +193,13 @@ TARGET_USES_WCNSS_MAC_ADDR_REV := true
 # Cyanogen hardware
 BOARD_HARDWARE_CLASS += device/leeco/s2/cmhw
 
-# Enable dexpreopt to speed boot time
+# Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT),)
+  ifeq ($(WITH_DEXPREOPT),)
+    ifeq ($(TARGET_BUILD_VARIANT),user)
       WITH_DEXPREOPT := true
+    else
+      WITH_DEXPREOPT := false
     endif
   endif
 endif
