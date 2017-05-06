@@ -396,6 +396,9 @@
         <item>SUPL_ES=0</item>
     </string-array>
 
+	<!-- Whether device supports double tap to wake -->
+	<bool name="config_supportDoubleTapWake">false</bool>
+
     <!-- Enable doze powersaving -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
