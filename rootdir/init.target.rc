@@ -313,3 +313,5 @@ on property:persist.sys.usb.gps.notify=1
 
 on property:persist.sys.usb.gps.notify=2
     write /sys/class/type-c/info/vbus_status 0
+	
+setprop persist.camera.HAL3.enabled 0	
