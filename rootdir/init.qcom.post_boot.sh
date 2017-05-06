@@ -457,4 +457,4 @@ if [ -f /sys/devices/soc0/select_image ]; then
 fi
 
 # Set scheduler
-write /sys/block/mmcblk0/queue/scheduler noop
+write /sys/block/mmcblk0/queue/scheduler sioplus
