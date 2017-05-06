@@ -19,11 +19,6 @@
    "repository" : "DirtyUnicorns/android_external_ant-wireless_antradio-library",
    "target_path": "external/ant-wireless/antradio-library",
    "branch"     : "n7x-caf"
- },
- {
-   "repository" : "DirtyUnicorns/android_vendor_qcom_binaries",
-   "target_path": "vendor/qcom/binaries",
-   "branch"     : "n7x-caf"
  }
  
 ]
