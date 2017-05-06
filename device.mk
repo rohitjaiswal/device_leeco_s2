@@ -308,7 +308,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd
+    fingerprintd \
+	fingerprint.kenzo
 
 PRODUCT_PACKAGES += \
     WCNSS_wlan_dictionary.dat
