@@ -274,3 +274,6 @@ persist.radio.cs_srv_type=1
 #gps
 persist.gps.qc_nlp_in_use=1
 ro.gps.agps_provider=1
+
+# Google Assistant
+ro.opa.eligible_device=true
