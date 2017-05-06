@@ -19,6 +19,52 @@
    "repository" : "DirtyUnicorns/android_external_ant-wireless_antradio-library",
    "target_path": "external/ant-wireless/antradio-library",
    "branch"     : "n7x-caf"
+ },
+ {
+   "repository" : "SlimRoms/vendor_codeaurora_telephony",
+   "target_path": "vendor/codeaurora/telephony",
+   "branch"     : "ng7.1"
+ },
+ {
+   "repository" : "LineageOS/android_external_libnetfilter_conntrack",
+   "target_path": "external/libnetfilter_conntrack",
+   "branch"     : "cm-14.1"
+ },
+ {
+   "repository" : "LineageOS/android_external_libnfnetlink",
+   "target_path": "external/libnfnetlink",
+   "branch"     : "cm-14.1"
+ },
+ {
+   "repository" : "LineageOS/android_vendor_qcom_opensource_cryptfs_hw",
+   "target_path": "vendor/qcom/opensource/cryptfs_hw",
+   "branch"     : "cm-14.1"
+ },
+ {
+   "repository" : "LineageOS/android_device_qcom_common",
+   "target_path": "device/qcom/common",
+   "branch"     : "cm-14.1"
+ },
+ {
+   "repository" : "LineageOS/android_hardware_sony_thermanager",
+   "target_path": "hardware/sony/thermanager",
+   "branch"     : "cm-14.1"
+ },
+ {
+   "repository" : "LineageOS/android_kernel_leeco_msm8976",
+   "target_path": "kernel/leeco/msm8976",
+   "branch"     : "cm-14.1"
+ },
+ {
+   "repository" : "rohitjaiswal/vendor_leeco"
+   "target_path": "vendor/leeco"
+   "branch"     : "testaosp1"
  }
- 
+
 ]
+
+
+ 
+
+
+ 
