@@ -104,6 +104,7 @@ camera.display.umax=1920x1080
 camera.display.lmax=1280x720
 camera.lowpower.record.enable=1
 persist.camera.stats.test=5
+persist.ts.rtmakeup=true
 
 # Audio voice concurrency related flags
 voice.playback.conc.disabled=true
