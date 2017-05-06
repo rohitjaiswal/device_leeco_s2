@@ -148,7 +148,8 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
-
+    writepid /dev/cpuset/camera-daemon/tasks
+	
 on init
    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
@@ -264,7 +265,10 @@ service yep_qmi_server /system/bin/yep_qmi_server
 
 service fingerprintd /system/bin/fingerprintd
     class late_start
+    socket fpce stream 0666 system system
     user system
+    group system sdcard_rw
+    writepid /dev/cpuset/system-background/tasks
 
 service gx_fpd /system/bin/gx_fpd
     class late_start
@@ -272,6 +276,15 @@ service gx_fpd /system/bin/gx_fpd
     group root system
     seclabel u:r:goodix:s0
 
+#on property:ro.boot.fpsensor=gdx
+#start gx_fpd
+
+on property:persist.sys.fp.goodix=0
+    stop gx_fpd
+
+on property:persist.sys.fp.goodix=1
+    start gx_fpd
+	
 service fidoca /system/vendor/bin/fidoca
     class late_start
     user system

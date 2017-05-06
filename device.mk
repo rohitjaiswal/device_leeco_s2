@@ -137,8 +137,8 @@ PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Browser
-PRODUCT_PACKAGES += \
-    Gello
+#PRODUCT_PACKAGES += \
+#    Gello
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -259,7 +259,8 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libqsap_sdk \
     telephony-ext \
-    libminui
+    libminui \
+	ims-ext-common
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
