@@ -32,6 +32,12 @@ persist.radio.atfwd.start=false
 # IMS
 # Enable IMS service by default
 persist.radio.calls.on.ims=0
+persist.radio.VT_HYBRID_ENABLE=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+
+#For RIJL netwrok video call
+persist.radio.NO_STAPA=1
 
 # qmi property to send unsolicited call state for PS call only to ims pipe & not to ril
 persist.radio.jbims=0
