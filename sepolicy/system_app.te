@@ -2,3 +2,7 @@ allow system_app cne_service:service_manager { add };
 
 allow system_app proc_touchpanel:dir search;
 allow system_app proc_touchpanel:file rw_file_perms;
+allow system_app fpce_socket:sock_file write;
+allow system_app fpc_data_file:sock_file write;
+allow system_app fingerprintd:unix_stream_socket { read write connectto};
+allow system_app fingerprintd:fd use;
