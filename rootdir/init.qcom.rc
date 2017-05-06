@@ -167,6 +167,14 @@ on boot
     # an ack packet comes out of order
     write /proc/sys/net/netfilter/nf_conntrack_tcp_be_liberal 1
 
+	# Don't reset entire SoC on individual subsystem crash
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys4/restart_level "related"
+	write /sys/bus/msm_subsys/devices/subsys5/restart_level "related"
+		
     # Set the console loglevel to < KERN_INFO
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "6 6 1 7"
