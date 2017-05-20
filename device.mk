@@ -137,8 +137,8 @@ PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Browser
-PRODUCT_PACKAGES += \
-    Gello
+#PRODUCT_PACKAGES += \
+    #Gello
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -158,7 +158,9 @@ PRODUCT_PACKAGES += \
     gralloc.msm8952 \
     copybit.msm8952 \
     hwcomposer.msm8952 \
-    memtrack.msm8952
+    memtrack.msm8952 \
+	hdmi_cec.msm8952 \
+	liboverlay
 
 # Display / OpenGLES
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -255,6 +257,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libril_proxy \
     libcnefeatureconfig \
     librmnetctl \
     libxml2 \
