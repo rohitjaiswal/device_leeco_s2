@@ -45,6 +45,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8952
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -89,8 +90,8 @@ BOARD_USES_QC_TIME_SERVICES := true
 TARGET_POWERHAL_VARIANT := qcom
 
 # RIL
-BOARD_PROVIDES_LIBRIL := true
-TARGET_RIL_VARIANT := caf
+#BOARD_PROVIDES_LIBRIL := true
+#TARGET_RIL_VARIANT := caf
 
 # Adreno
 HAVE_ADRENO_SOURCE:= false
@@ -188,13 +189,13 @@ TARGET_USES_WCNSS_MAC_ADDR_REV := true
 BOARD_HARDWARE_CLASS += device/leeco/s2/cmhw
 
 # Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
+#ifeq ($(HOST_OS),linux)
+#  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
+#    ifeq ($(WITH_DEXPREOPT),)
+#      WITH_DEXPREOPT := true
+#    endif
+#  endif
+#endif
 
 # Twrp
 #RECOVERY_VARIANT := twrp
