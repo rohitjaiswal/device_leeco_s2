@@ -234,6 +234,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 include device/qcom/sepolicy/sepolicy.mk
 
+
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+
 # OTA Assert
 TARGET_OTA_ASSERT_DEVICE := s2,le_s2,le_s2_ww
 
