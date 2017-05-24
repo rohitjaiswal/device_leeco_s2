@@ -94,6 +94,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
+    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
@@ -347,6 +348,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 # Model is set via init library
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.model
-# DU Updater
-PRODUCT_PROPERTY_OVERRIDES += \
-               ro.du.updater=s2
+
