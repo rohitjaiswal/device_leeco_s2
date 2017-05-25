@@ -36,7 +36,7 @@ on early-init
     insmod /sbin/qdrbg_module.ko
 
 on init
-    export LD_SHIM_LIBS /system/vendor/lib64/lib-imsvt.so|libshims_ims.so
+    export LD_SHIM_LIBS "/system/vendor/lib64/lib-imsvt.so|libshims_ims.so:/system/bin/mm-qcamera-daemon|libshims_camera.so"
 
     start qfintverify
 
@@ -794,8 +794,10 @@ service qlogd /system/xbin/qlogd
     socket qlogd stream 0662 system system
     class main
     disabled
+
 on property:persist.sys.qlogd=1
     start qlogd
+
 on property:persist.sys.qlogd=0
     stop qlogd
 
