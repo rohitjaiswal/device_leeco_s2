@@ -145,8 +145,8 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 # CMActions
-PRODUCT_PACKAGES += \
-    CMActions
+#PRODUCT_PACKAGES += \
+#    CMActions
 
 # Display
 PRODUCT_PACKAGES += \
