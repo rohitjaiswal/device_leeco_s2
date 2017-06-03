@@ -259,3 +259,6 @@ cpuquiet.normal.max_cpus=8
 rqbalance.normal.balance_level=40
 rqbalance.normal.up_threshold=100 250 330 4294967295
 rqbalance.normal.down_threshold=0 130 220 300
+
+
+ro.product.model=LeECo Le 2
