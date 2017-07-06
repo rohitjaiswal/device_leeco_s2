@@ -1,1 +1,2 @@
-add_lunch_combo lineage_s2-userdebug
+add_lunch_combo cardinal_s2-userdebug
+add_lunch_combo cardinal_s2-eng
